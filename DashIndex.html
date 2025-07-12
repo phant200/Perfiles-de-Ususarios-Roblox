@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Login Form - CSS</title>
+  <link rel="stylesheet" href="./IndexSadh.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!--ring div starts here-->
+<div class="ring">
+  <i style="--clr:#00ff0a;"></i>
+  <i style="--clr:#ff0057;"></i>
+  <i style="--clr:#fffd44;"></i>
+  <div class="login">
+    <h2>Iniciar Sesion</h2>
+    <div class="inputBx">
+      <input type="text" id="usuario" placeholder="Usuario">
+    </div>
+    <div class="inputBx">
+      <input type="password" id="contrasena" placeholder="Contraseña">
+    </div>
+    <div class="inputBx">
+      <input type="submit" value="Sign in" onclick="verificarCredenciales()">
+    </div>
+    <div class="links">
+      <a href="#">Forget Password</a>
+      <a href="#">Signup</a>
+    </div>
+  </div>
+</div>
+<!--ring div ends here-->
+<script>
+  function verificarCredenciales() {
+    const usuario = document.getElementById("usuario").value;
+    const contrasena = document.getElementById("contrasena").value;
+
+    if (usuario === "Mich" && contrasena === "MichUploadPVIDEO92_") {
+      // Redirige al dashboard
+      window.location.href = "dashboardMich.html";
+    } else {
+      alert("Usuario o contraseña incorrectos");
+    }
+  }
+</script>
+<!-- partial -->
+  
+</body>
+</html>
