@@ -447,13 +447,14 @@ footer {
   z-index: 12;
 }
 .user-icon {
-  width: 100%;
-  display: block;
-  border-radius: 50%;
-  border: .5em solid var(--bc);
-  background-color: var(--bc);
-  z-index: 12;
+  width: 150px !important;
+  height: 150px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: none !important;
 }
+
 .user-header-inner {
   z-index: 5;
   width: 100%;

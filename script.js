@@ -67,3 +67,31 @@ $(".username-wrapper").on({
         $(".verified").css("top", "150%");
     }
 });
+
+// Obtener elementos
+const overlay = document.getElementById('imageOverlay');
+const overlayImg = document.getElementById('overlayImage');
+const closeBtn = document.getElementById('closeImageOverlay');
+
+// Cuando hagan click en una imagen dentro de publicaciones
+document.querySelectorAll('.post-info img').forEach(img => {
+  img.addEventListener('click', () => {
+    overlay.style.display = 'flex';
+    overlayImg.src = img.src;
+    overlayImg.alt = img.alt || 'Imagen ampliada';
+  });
+});
+
+// Cerrar overlay con botón
+closeBtn.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  overlayImg.src = '';
+});
+
+// También cerrar al hacer click fuera de la imagen
+overlay.addEventListener('click', e => {
+  if (e.target === overlay) {
+    overlay.style.display = 'none';
+    overlayImg.src = '';
+  }
+});
